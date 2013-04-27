@@ -1,0 +1,24 @@
+mixin show_feedbacks(feedbacks)
+  ul.list
+    - for feedback in feedbacks
+        li.item
+            ul.inner_list
+              if(feedback.has_voted())
+                li.vote.btn.disabled(id='item_#{'%d' % feedback.id}',data-id=feedback.id)
+                  ul.inner_list
+                    li.vote_count(id='counter_#{'feedback.id'}')= feedback.vote_count()
+                    li.vote_icon.icon-hand-up
+              else
+                li.vote.btn.btn-warning(id='item_#{'%d' % feedback.id}',data-id=feedback.id)
+                  ul.inner_list
+                    li.vote_count(id='counter_#{'%d' % feedback.id}')= feedback.vote_count()
+                    li.vote_icon.icon-hand-up
+              li.content= feedback.content
+
+
+.feedbacks
+    mixin show_feedbacks(feedbacks)
+    .more
+      if has_next
+        .more_wrapper.center
+          button.more_btn.btn.btn-block.btn-warning(data-page='#{'%d' % next_page}', data-tab='#{tab_name}') 더 보기(More)

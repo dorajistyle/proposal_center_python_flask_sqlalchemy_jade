@@ -1,0 +1,31 @@
+| {% extends "base.jade" %}
+| {% block content %}
+form#feedback_form.pt50(action='/add_feedback', data-ajax='false', method='post')
+  div(style='margin: 0; padding: 0; display: inline;')
+    input(name='authenticity_token', type='hidden', value='hkDQdyexevZFRIS0qWUrlFADP7HmcRHmXzKQ9NPRzHM=')
+  .feedback_description
+    | 서비스에 대한 여러분의 생각이나 제안, 무엇이든 말씀해주세요! 함께 만들어가겠습니다!
+    | Please let us know what you think, proposal anything.
+    br
+  .email_box.pt10
+    input#email.email.span12(name='email', type='email', value='',placeholder='이메일을 입력해주세요.(Please enter an email address.)', style='font-size: 16px;')
+  #pp_buttons_radio.btn-group.span12(data-toggle='buttons-radio')
+    button.btn.btn-small.active.span3(type='button', name='propose_type', value='1') 웹(Web)
+    button.btn.btn-small.span3(type='button', name='propose_type', value='2') 모바일(Mobile)
+    button.btn.btn-small.span3(type='button', name='propose_type', value='3') 개발제안(Development)
+    button.btn.btn-small.span3(type='button', name='propose_type', value='4') 기타(Etc)
+  input(type='hidden', id='propose_type',name='propose_type',value='1')
+  div(style='clear: both;')
+  .content_box.pt10
+    textarea#content.span12(name='content', style='height: 200px; font-size: 13px;', placeholder='웹에 제안하실 내용을 입력해주세요.(Enter text that you want to propse for web.)')
+  .agreement.pt10
+    table(style='border-collapse: collapse;')
+      tr
+        td(valign='top')
+          input#agreement(type='checkbox', name='agreement', value='true', data-role='none')
+        td(valign='top')
+          label(for='agreement') *입력하신 개인정보는 해당 목적으로만 사용됩니다. 개인정보 이용 방침에 동의합니다. (I confirm the terms and conditions, and approve it.)
+          br
+  button.btn.btn-block(type='submit') 보내기(Send)
+
+| {% endblock %}

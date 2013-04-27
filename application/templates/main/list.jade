@@ -1,0 +1,33 @@
+| {% extends "base.jade" %}
+| {% block content %}
+//
+   Main hero unit for a primary marketing message or call to action
+#proposal_btn.page-header
+  a(href='/propose',title="사용자 개선 참여하기(Participate to improve this service)")
+    h1
+      함께 만드는 서비스(Our Service)!
+      br
+      small 사용자 개선 참여하기(Participate to improve this service)
+//
+   Example row of columns
+ul#proposal_tab.nav.nav-tabs
+  li.active
+    a(href='#all') 전체(All)
+  li
+    a(href='#web') 웹(Web)
+  li
+    a(href='#mobile') 모바일(Mobile)
+  li
+    a(href='#dev') 개발제안(Development)
+  li
+    a(href='#etc') 기타(Etc)
+
+#tabs.tab-content
+  #all.tab-pane.active
+    - include 'main/feedbacks.jade'
+  #web.tab-pane
+  #mobile.tab-pane
+  #dev.tab-pane
+  #etc.tab-pane
+
+| {% endblock %}
