@@ -30,4 +30,4 @@ ________________________
 ## Attributions
 
 This Proposal center application source(Python + Flask + Flask-SQLAlchemy + Jade) was made by [JoongSeob Vito Kim](http://www.dorajistyle.pe.kr/p/about-me.html).
-It's under the MIT license.
+It's under the [MIT license](http://rem.mit-license.org).
