@@ -20,10 +20,10 @@ It's a simple Proposal Center example for developer who interested in Python Fla
     python flask_proposal.py
 
 ### How to use
-1) When you click a orange button, it will go to proposal page.
-2) Chose a category and fill out the form, the data will be stored in DB.
-3) When you click the vote button, the vote count will be increased. (IP based)
-4) If you have more than three items, You can see the 'more' button. When you click this, you can see more items.
+##### 1) When you click a orange button, it will go to proposal page.
+##### 2) Chose a category and fill out the form, the data will be stored in DB.
+##### 3) When you click the vote button, the vote count will be increased. (IP based)
+##### 4) If you have more than three items, You can see the 'more' button. When you click this, you can see more items.
 
 ________________________
 
