@@ -101,7 +101,7 @@ $(function () {
         } else if (categoryId == 3) {
           textMessage = "아이디어와 제안을 입력해주세요.(Enter text that you want to propse about your idea.)";
         } else {
-          textMessage = "다른 사람은 모르는 나만의 번개장터 이야기를 보내주세요. (Enter text that your story in our service.)";
+          textMessage = "다른 사람은 모르는 나만의 이야기를 보내주세요. (Enter text that your story in our service.)";
         }
         $('#content').attr('placeholder', textMessage);
     });
